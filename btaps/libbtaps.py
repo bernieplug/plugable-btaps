@@ -32,18 +32,21 @@ class BTaps:
         matches = bluetooth.find_service(address=self.btaddr)
 
         if len(matches) == 0:
-            return 1
+            return 0
 
         for match in matches:
             if match['protocol'] == 'RFCOMM' and bluetooth.SERIAL_PORT_PROFILE in match['profiles']:
                 device = match
                 break
         else:
-            return 1
+            return 0
 
         self.socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        self.socket.connect((device["host"], device["port"]))
-        return 0
+        try:
+            self.socket.connect((device["host"], device["port"]))
+        except bluetooth.btcommon.BluetoothError:
+            return 0
+        return 1
 
     def disconnect(self):
         if self.socket:

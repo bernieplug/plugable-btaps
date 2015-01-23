@@ -10,6 +10,13 @@ def get_line():
     return line
 
 
+def print_dic_sorted(dic):
+    order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    for key in sorted(dic, key=order.index):
+        print key, ":", dic[key], "",
+
+    print ""
+
 def print_timers(timer_list):
     print "Timers:"
     for timer in timer_list:
@@ -20,7 +27,8 @@ def print_timers(timer_list):
             print "On"
         else:
             print "Off"
-        print "\tDays: ", timer.repeat_days
+        print "\tDays: ",
+        print_dic_sorted(timer.repeat_days)
         print "\tStart Time: ", timer.start_time
         print "\tEnd Time: ", timer.end_time
         print ""
@@ -99,7 +107,8 @@ def modify_timer(btaps, timer_list):
         mod_timer.set_name(name)
 
     print "Enter Start and End Time in 24-hour format (ex: 23:54)"
-    print "Start Time: ", mod_timer.start_time
+    print "Start Time: ",
+    print_dic_sorted(mod_timer.start_time)
     start = get_line()
     if start != '':
         start = time.strptime(start, "%H:%M")
@@ -111,7 +120,7 @@ def modify_timer(btaps, timer_list):
         end = time.strptime(end, "%H:%M")
         mod_timer.set_end_time(end[3], end[4])
 
-    print "Repeat Timer?"
+    print "Repeat Timer?", mod_timer.repeat_days
     repeat = get_line().lower()
     if repeat == "y":
         day_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -143,7 +152,9 @@ def main(argv):
         sys.exit(0)
 
     btaps = libbtaps.BTaps(argv[1])
-    btaps.connect()
+    connected = btaps.connect()
+    if not connected:
+        sys.exit(0)
     btaps.set_datetime_now()
     status = print_status(btaps)
     print_timers(status[1])
