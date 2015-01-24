@@ -10,6 +10,7 @@ def get_line():
     return line
 
 
+# Sort day dictionary in Monday-Sunday order
 def print_dic_sorted(dic):
     order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     for key in sorted(dic, key=order.index):
@@ -17,6 +18,8 @@ def print_dic_sorted(dic):
 
     print ""
 
+
+# Given a list of BTApsTimer objects, print them in a legible format
 def print_timers(timer_list):
     print "Timers:"
     for timer in timer_list:
@@ -34,6 +37,7 @@ def print_timers(timer_list):
         print ""
 
 
+# Turn switch on/off
 def toggle_switch(btaps, status):
     if status == 0:
         btaps.set_switch(True)
@@ -41,6 +45,7 @@ def toggle_switch(btaps, status):
         btaps.set_switch(False)
 
 
+# Print name and on/off state of switch
 def print_status(btaps):
     name = btaps.get_dev_name()
     status = btaps.get_switch_state()
@@ -55,6 +60,7 @@ def print_status(btaps):
     return status
 
 
+# Simple interactive command line prompts for creating new timer
 def create_timer(btaps, timer_list):
     print "Creating New Timer:"
     print "Name: "
@@ -95,6 +101,7 @@ def create_timer(btaps, timer_list):
     btaps.create_timer(new_timer)
 
 
+# Simple interactive command line prompts for modifying a timer
 def modify_timer(btaps, timer_list):
     print "Enter Timer ID for the timer you wish to modify:"
     id = get_line()
@@ -146,11 +153,13 @@ def modify_timer(btaps, timer_list):
 
 
 def main(argv):
-    print " === Plugable PS-BTAPS CLI v0.1 ==="
+    print " === Plugable PS-BTAPS CLI v0.8 ==="
     if len(argv) != 2:
-        print "USAGE: python " + sys.argv[0] + " [bdaddr]"
+        print "USAGE:   python", sys.argv[0], "[Bluetooth address]"
+        print "EXAMPLE: python", sys.argv[0], "00:00:FF:FF:00:00"
         sys.exit(0)
 
+    # Establish connection to BTAPS
     btaps = libbtaps.BTaps(argv[1])
     connected = btaps.connect()
     if not connected:

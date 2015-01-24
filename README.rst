@@ -9,6 +9,8 @@ libbtaps.py
     Serves as a python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
 btaps.py 
     A simple command-line UI that implements all of the features exposed by libbtaps.py
+    USAGE:   python btaps.py [Bluetooth address]
+    EXAMPLE: python btaps.py 00:00:FF:FF:00:00
 
 Implemented Functionality
 _________________________
@@ -21,9 +23,12 @@ The following functions of the Plugable PS-BTAPS1 are currently present in the l
  
 TO DO
 _____
-The following features are not currently supported:
+The following features and items are still to come:
  - NFControl (Device proximity on/off functionality)
  - Security PIN
+ - Better error handling
+ - Better documentation
+ - Mac OS X support
 
 OS Support
 __________
