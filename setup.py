@@ -17,7 +17,7 @@ setup(
     url='https://github.com/bernieplug/plugable-btaps',
 
     # Author details
-    author='Ivan Fossa-Ferrari',
+    author='Plugable Technologies',
     author_email='ivan@plugable.com',
 
     license='MIT',
@@ -32,12 +32,12 @@ setup(
 
     keywords='bluetooth home-automation',
 
-    packages=find_packages(),
+    packages=['btaps'],
     install_requires=['pybluez'],
 
     entry_points={
         'console_scripts': [
-            'btaps=btaps.btaps:main',
+            'btaps=btaps:main',
         ],
     },
 )
