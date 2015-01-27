@@ -37,12 +37,14 @@ Due to PyBluez limitations, this library will currently only work on Linux and W
 
 Dependencies
 ____________
-
  - Python 2.7.x
  - PyBluez aka python-bluez
- 
+
+Installation
+____________
+First, install PyBluez using the appropriate step below:
 Windows
-    Download PyBluez from: https://code.google.com/p/pybluez 
+    Download PyBluez from: https://code.google.com/p/pybluez
 Ubuntu/Debian
     sudo apt-get install python-bluez
 Fedora
@@ -50,6 +52,11 @@ Fedora
 Arch
     sudo pacman -S python2-pybluez
 
-Installation
-____________
-Coming soon to a pip repository near you!
+Then, simply pip install our module:
+    pip install plugable-btaps
+
+Troubleshooting
+_______________
+When I try to pip install plugable-btaps I get a compilation error:
+    This means that you have not installed PyBluez and pip is trying to compile PyBluez from source, but you don't have the necessary compilation dependencies installed on your system.
+    Install PyBluez as outlined above.

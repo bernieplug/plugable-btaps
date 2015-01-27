@@ -5,12 +5,12 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='plugable-btaps',
-    version='0.8.0',
+    version='0.8.2',
 
     description='Open Source Library for Controlling the Plugable PS-BTAPS1 Bluetooth AC Outlet Switch',
     long_description=long_description,
@@ -28,6 +28,9 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2 :: Only',
         'Programming Language :: Python :: 2.7',
+        'Environment :: Console',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: POSIX :: Linux',
     ],
 
     keywords='bluetooth home-automation',
