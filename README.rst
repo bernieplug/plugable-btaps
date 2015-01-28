@@ -3,13 +3,13 @@ Plugable PS-BTAPS1 Library and CLI
 
 Description
 ___________
-This project is a library and command-line interface for communicating with and programming a Plugable PS-BTAPS1 Bluetooth Home Automation Switch.
+This project is a library and command-line interface for communicating with and programming a `Plugable PS-BTAPS1 Bluetooth Home Automation Switch<http://plugable.com/products/ps-btaps1>`_.
 
 libbtaps.py 
     Serves as a python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
 btaps.py 
     A simple command-line UI that implements all of the features exposed by libbtaps.py
-
+::
     USAGE:   python btaps.py [Bluetooth address]
     EXAMPLE: python btaps.py 00:00:FF:FF:00:00
 
@@ -43,16 +43,21 @@ ____________
 Installation
 ____________
 First, install PyBluez using the appropriate step below:
+
 Windows
     Download PyBluez from: https://code.google.com/p/pybluez
 Ubuntu/Debian
+::
     sudo apt-get install python-bluez
 Fedora
+::
     sudo yum install pybluez
 Arch
+::
     sudo pacman -S python2-pybluez
 
 Then, simply pip install our module:
+::
     pip install plugable-btaps
 
 Troubleshooting
