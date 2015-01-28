@@ -236,7 +236,8 @@ class BTapsTimer:
 
         self.start_time = start_time
         self.end_time = end_time
-        self.repeat_days = None
+        self.repeat_days = {'Mon': False, 'Tue': False, 'Wed': False,
+                            'Thu': False, 'Fri': False, 'Sat': False, 'Sun': False}
         self.on = on
 
     # Set timer's name
@@ -253,8 +254,21 @@ class BTapsTimer:
 
     # Set days on which timer repeats
     # mon,tue,wed,thu,fri,sat,sun: (bool) Enable timer repeat on said day
-    def set_repeat_days(self, mon=False, tue=False, wed=False, thu=False, fri=False, sat=False, sun=False):
-        self.repeat_days = {'Mon': mon, 'Tue': tue, 'Wed': wed, 'Thu': thu, 'Fri': fri, 'Sat': sat, 'Sun': sun}
+    def set_repeat_days(self, mon=None, tue=None, wed=None, thu=None, fri=None, sat=None, sun=None):
+        if mon is not None:
+            self.repeat_days['Mon'] = mon
+        if tue is not None:
+            self.repeat_days['Tue'] = tue
+        if wed is not None:
+            self.repeat_days['Wed'] = wed
+        if thu is not None:
+            self.repeat_days['Thu'] = thu
+        if fri is not None:
+            self.repeat_days['Fri'] = fri
+        if sat is not None:
+            self.repeat_days['Sat'] = sat
+        if sun is not None:
+            self.repeat_days['Sun'] = sun
 
     # Set timer's start time
     # hour: (int) Hour to start timer

@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='plugable-btaps',
-    version='0.8.2',
+    version='0.8.3',
 
     description='Open Source Library for Controlling the Plugable PS-BTAPS1 Bluetooth AC Outlet Switch',
     long_description=long_description,

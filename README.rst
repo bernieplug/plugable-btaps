@@ -6,9 +6,9 @@ ___________
 This project is a library and command-line interface for communicating with and programming a `Plugable PS-BTAPS1 Bluetooth Home Automation Switch`_.
 
 libbtaps.py 
-    Serves as a python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
+    Serves as a Python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
 btaps.py 
-    A simple command-line UI that implements all of the features exposed by libbtaps.py
+    A simple command-line UI that implements all the features exposed by libbtaps.py.
 
 ::
 
@@ -22,7 +22,7 @@ The following functions of the Plugable PS-BTAPS1 are currently present in the l
  - Reading current status of switch(name, on/off, timer settings)
  - Creating, modifying and deleting timers
  - Changing the device's name
- - Updating the device's date and time to your PC's current date and time.
+ - Updating the device's date and time to your PC's current date and time
  
 TO DO
 _____
@@ -44,7 +44,7 @@ ____________
 
 Installation
 ____________
-First, install PyBluez using the appropriate step below:
+First, install PyBluez using the appropriate link or command for your OS:
 
 **Windows**
     Download and install `PyBluez for Python 2.7`_
@@ -70,6 +70,10 @@ Then, simply pip install our module:
 
     pip install plugable-btaps
 
+Documentation and Examples
+__________________________
+Find some usage examples and documentation in `DOCUMENTATION.rst`_
+
 Troubleshooting
 _______________
 When I try to pip install plugable-btaps I get a compilation error:
@@ -80,3 +84,4 @@ When I try to pip install plugable-btaps I get a compilation error:
 .. _PyBluez: https://code.google.com/p/pybluez/
 .. _Python 2.7.x: https://www.python.org/
 .. _PyBluez for Python 2.7: https://code.google.com/p/pybluez/downloads/detail?name=PyBluez-0.20.win32-py2.7.exe
+.. _DOCUMENTATION.rst: https://github.com/bernieplug/plugable-btaps/blob/master/DOCUMENTATION.rst
