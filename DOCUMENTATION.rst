@@ -10,7 +10,10 @@ Example 1:
 
     import btaps.libbtaps as libbtaps
 
-    with libbtaps.BTaps("00:00:00:00:00:00") as btapsobj:
+    # Bluetooth Device Address for your PS-BTAPS1
+    bdaddr = "00:00:00:00:00:00"
+
+    with libbtaps.BTaps(bdaddr) as btapsobj:
         name = btapsobj.get_dev_name()
 
     print name
@@ -20,7 +23,10 @@ Example 2:
 
     import btaps.libbtaps as libbtaps
 
-    btapsobj = libbtaps.BTaps("00:00:00:00:00:00")
+    # Bluetooth Device Address for your PS-BTAPS1
+    bdaddr = "00:00:00:00:00:00"
+
+    btapsobj = libbtaps.BTaps(bdaddr)
     btapsobj.connect()
     name = btapsobj.get_dev_name()
     btapsobj.disconnect()
@@ -71,6 +77,8 @@ Example 2:
     with libbtaps.BTaps("00:00:00:00:00:00") as btapsobj:
         # Get saved timers and on/off information
         on, timer_list = btapsobj.get_switch_state()
+
+        # timer_list is a list of all timers in device. Here we are just selecting the first timer on the list
         mod_timer = timer_list[0]
 
         # Stop timer from repeating on Mondays, set it to repeat on Tuesdays
@@ -80,4 +88,5 @@ Example 2:
         btapsobj.modify_timer(mod_timer)
 
 **More Examples**
+
 For more usage examples, please look at btaps.py.

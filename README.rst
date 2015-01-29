@@ -64,15 +64,14 @@ First, install PyBluez using the appropriate link or command for your OS:
 
     sudo pacman -S python2-pybluez
 
-
 Then, simply pip install our module:
 ::
 
     pip install plugable-btaps
 
-Documentation and Examples
+libbtaps Docs and Examples
 __________________________
-Find some usage examples and documentation in `DOCUMENTATION.rst`_
+Find some usage examples and documentation for libbtaps in `DOCUMENTATION.rst`_
 
 Troubleshooting
 _______________
