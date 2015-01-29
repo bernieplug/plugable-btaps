@@ -6,7 +6,7 @@ Using libbtaps.py
 You can either use the with syntax, or simply call connect/disconnect.
 
 Example 1:
-.. code-block:: python
+::
 
     import btaps.libbtaps as libbtaps
 
@@ -19,7 +19,7 @@ Example 1:
     print name
 
 Example 2:
-.. code-block:: python
+::
 
     import btaps.libbtaps as libbtaps
 
@@ -33,7 +33,7 @@ Example 2:
     print name
 
 **Turning Switch ON/OFF**
-.. code-block:: python
+::
 
     import btaps.libbtaps as libbtaps
 
@@ -45,7 +45,7 @@ Example 2:
         btapsobj.set_switch(False)
 
 **Creating a timer**
-.. code-block:: python
+::
 
     import btaps.libbtaps as libbtaps
 
@@ -69,7 +69,7 @@ Example 2:
         btapsobj.create_timer(timerobj)
 
 **Modifying existing timer**
-.. code-block:: python
+::
 
     import btaps.libbtaps as libbtaps
 
