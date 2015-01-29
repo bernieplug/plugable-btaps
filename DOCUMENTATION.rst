@@ -6,7 +6,7 @@ Using libbtaps.py
 You can either use the with syntax, or simply call connect/disconnect.
 
 Example 1:
-::
+.. code:: python
 
     import btaps.libbtaps as libbtaps
 
@@ -19,7 +19,7 @@ Example 1:
     print name
 
 Example 2:
-::
+.. code:: python
 
     import btaps.libbtaps as libbtaps
 

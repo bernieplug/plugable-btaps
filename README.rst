@@ -8,9 +8,7 @@ This project is a library and command-line interface for communicating with and 
 libbtaps.py 
     Serves as a Python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
 btaps.py 
-    A simple command-line UI that implements all the features exposed by libbtaps.py.
-
-::
+    A simple command-line UI that implements all the features exposed by libbtaps.py.::
 
     USAGE:   python btaps.py [Bluetooth address]
     EXAMPLE: python btaps.py 00:00:FF:FF:00:00
@@ -49,23 +47,19 @@ First, install PyBluez using the appropriate link or command for your OS:
 **Windows**
     Download and install `PyBluez for Python 2.7`_
 
-**Ubuntu/Debian**
-::
+**Ubuntu/Debian**::
 
     sudo apt-get install python-bluez
 
-**Fedora**
-::
+**Fedora**::
 
     sudo yum install pybluez
 
-**Arch**
-::
+**Arch**::
 
     sudo pacman -S python2-pybluez
 
-Then, simply pip install our module:
-::
+Then, simply pip install our module:::
 
     pip install plugable-btaps
 
