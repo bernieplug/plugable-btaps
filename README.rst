@@ -8,7 +8,9 @@ This project is a library and command-line interface for communicating with and 
 libbtaps.py 
     Serves as a Python implementation of the BTAPS protocol, either to be used directly in your programs, or to be used as a reference in developing your own implementation in a different language.
 btaps.py 
-    A simple command-line UI that implements all the features exposed by libbtaps.py.::
+    A simple command-line UI that implements all the features exposed by libbtaps.py.
+
+::
 
     USAGE:   python btaps.py [Bluetooth address]
     EXAMPLE: python btaps.py 00:00:FF:FF:00:00
