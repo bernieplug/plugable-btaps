@@ -19,7 +19,7 @@ Implemented Functionality
 _________________________
 The following functions of the Plugable PS-BTAPS1 are currently present in the library:
  - Setting Switch On/Off
- - Reading current status of switch(name, on/off, timer settings)
+ - Reading current status of switch (name, on/off state, timer settings)
  - Creating, modifying and deleting timers
  - Changing the device's name
  - Updating the device's date and time to your PC's current date and time
@@ -67,7 +67,7 @@ Then, simply pip install our module:::
 
 libbtaps Docs and Examples
 __________________________
-Find some usage examples and documentation for libbtaps in `DOCUMENTATION.rst`_
+Find some usage examples and documentation for libbtaps in our `GitHub Wiki`_
 
 Troubleshooting
 _______________
@@ -79,4 +79,4 @@ When I try to pip install plugable-btaps I get a compilation error:
 .. _PyBluez: https://code.google.com/p/pybluez/
 .. _Python 2.7.x: https://www.python.org/
 .. _PyBluez for Python 2.7: https://code.google.com/p/pybluez/downloads/detail?name=PyBluez-0.20.win32-py2.7.exe
-.. _DOCUMENTATION.rst: https://github.com/bernieplug/plugable-btaps/wiki/libbtaps-Documentation-and-Examples
+.. _GitHub Wiki:: https://github.com/bernieplug/plugable-btaps/wiki/libbtaps-Documentation-and-Examples
