@@ -79,4 +79,4 @@ When I try to pip install plugable-btaps I get a compilation error:
 .. _PyBluez: https://code.google.com/p/pybluez/
 .. _Python 2.7.x: https://www.python.org/
 .. _PyBluez for Python 2.7: https://code.google.com/p/pybluez/downloads/detail?name=PyBluez-0.20.win32-py2.7.exe
-.. _GitHub Wiki:: https://github.com/bernieplug/plugable-btaps/wiki/libbtaps-Documentation-and-Examples
+.. _GitHub Wiki: https://github.com/bernieplug/plugable-btaps/wiki/libbtaps-Documentation-and-Examples
